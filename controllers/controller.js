@@ -19,6 +19,19 @@ router.get("/", function (req, res) {
     });
 });
 
+router.get("/books/:name", function (req, res) {
+    var condition = "book_name = " + req.params.name;
+
+    book.selectOne(function (data) {
+        var bookObject = {
+            book: data
+        };
+        console.log(bookObject);
+
+        res.render("book", bookObject);
+    });
+});
+
 router.get("/api/books", function (req, res) {
     book.selectAll(function (data) {
         var booksObject = {
@@ -29,7 +42,7 @@ router.get("/api/books", function (req, res) {
 })
 
 router.post("/api/books", function (req, res) {
-    burger.insertOne(["book_name", "category"], [req.body.book_name, req.body.category], function (result) {
+    book.insertOne(["book_name", "category"], [req.body.book_name, req.body.category], function (result) {
         // Send back the ID of the new book
         res.json({ id: result.insertId });
     });
