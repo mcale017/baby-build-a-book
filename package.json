@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mcale017/baby-build-a-book#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",

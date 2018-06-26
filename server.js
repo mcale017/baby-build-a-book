@@ -29,6 +29,9 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
+// Require .env to allow unique password
+require('dotenv').config();
+
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
