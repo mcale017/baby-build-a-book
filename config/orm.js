@@ -38,3 +38,59 @@ function objToSql(ob) {
     // Translate array of strings to a single comma-separated string
     return arr.toString();
 };
+
+// orm functions
+var orm = {
+    selectAll: function (tableInput, cb) {
+        var queryString = "SELECT * FROM " + tableInput + ";";
+
+        console.log(queryString);
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    // Will need to test this one
+    selectOne: function (table, condition, cb) {
+        var queryString = "SELECT * FROM " + table;
+
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+
+        connection.query(queryString, vals, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
+    },
+    insertOne: function (table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table;
+
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+
+        console.log(queryString);
+
+        connection.query(queryString, vals, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
+    }
+};
+
+// Export the orm object for the model (burger.js).
+module.exports = orm;

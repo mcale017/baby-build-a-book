@@ -17,6 +17,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 
+// Handlebars initialization
+var exphbs = require("express-handlebars");
+
+// Handlebars in express
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Import routes and give the server access to them.
 var routes = require("./controllers/controller.js");
 
