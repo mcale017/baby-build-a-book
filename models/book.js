@@ -1,23 +1,15 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+module.exports = function (sequelize, DataTypes) {
+    var babyBook = sequelize.define("babyBook", {
+        // babyBook content
+    });
 
-var book = {
-    selectAll: function (cb) {
-        orm.selectAll("books", function (res) {
-            cb(res);
-        });
-    },
-    selectOne: function (condition, cb) {
-        orm.selectOne("books", condition, function (res) {
-            cb(res);
-        });
-    },
-    insertOne: function (cols, vals, cb) {
-        orm.insertOne("books", cols, vals, function (res) {
-            cb(res);
-        });
-    }
+    return babyBook;
 };
 
-// Export the database functions for the controller
-module.exports = book;
+// module.exports = function (sequelize, DataTypes) {
+//     var Todo = sequelize.define("Todo", {
+//         text: DataTypes.STRING,
+//         complete: DataTypes.BOOLEAN
+//     });
+//     return Todo;
+// };

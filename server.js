@@ -1,12 +1,16 @@
 // npm dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
+var exphbs = require("express-handlebars");
 
 // Variable app now refers to express
 var app = express();
 
-// Allowing express to access the port at 3000 if it isn't already
-var PORT = process.env.PORT || 3000;
+// Allowing express to access the port at 8080 if it isn't already
+var PORT = process.env.PORT || 8080;
+
+// Requiring our models for syncing
+var db = require("./models");
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -17,19 +21,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 
-// Handlebars initialization
-var exphbs = require("express-handlebars");
-
 // Handlebars in express
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/controller.js");
+// Require both api & html routes
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-app.use(routes);
-
-// Listening to the server
-app.listen(PORT, function () {
-    console.log("App now listening at localhost:" + PORT);
+// Syncing our sequelize models and then starting our Express app
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    });
 });
