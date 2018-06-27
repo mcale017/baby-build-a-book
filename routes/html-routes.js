@@ -2,18 +2,18 @@ var db = require("../models");
 
 module.exports = function(app) {
     app.get("/", function(req, res) {
-        db.BabyBook.findAll({}).then(function(dbBabyBook) {
-            res.render("index", dbBabyBook);
+        db.Book.findAll({}).then(function(dbBook) {
+            res.render("index", dbBook);
         });
     });
 
     app.get("/babybooks/:id", function(req, res) {
-        db.BabyBook.findOne({
+        db.Book.findOne({
             where: {
                 id: req.params.id
             }
-        }).then(function(dbBabyBook) {
-            res.render("babybook", dbBabyBook);
+        }).then(function(dbBook) {
+            res.render("book", dbBook);
         });
     });
 };
