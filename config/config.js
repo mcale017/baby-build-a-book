@@ -3,7 +3,7 @@ module.exports = {
     "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
     "database": "babybooks_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
   },
