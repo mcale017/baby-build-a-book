@@ -29,7 +29,6 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Require both api & html routes
-require("./routes/baby-api-routes.js")(app);
 require("./routes/book-api-routes.js")(app);
 require("./routes/theme-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
