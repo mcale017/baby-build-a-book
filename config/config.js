@@ -1,7 +1,7 @@
 module.exports = {
   development: {
-    username: "root",
-    password: "123abc",
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
     database: "babybooks_db",
     host: "127.0.0.1",
     port: 3306,

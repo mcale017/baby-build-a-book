@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var BabyBook = sequelize.define("BabyBook", {
+    var Book = sequelize.define("Book", {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -51,13 +51,5 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    return BabyBook;
+    return Book;
 };
-
-// module.exports = function (sequelize, DataTypes) {
-//     var Todo = sequelize.define("Todo", {
-//         text: DataTypes.STRING,
-//         complete: DataTypes.BOOLEAN
-//     });
-//     return Todo;
-// };
