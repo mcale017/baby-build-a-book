@@ -94,3 +94,21 @@ h2{
 header {
   background-color: aquamarine !important;
 }
+.input_hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.selected {
+  background-color: rgb(80, 207, 30);
+}
+
+#emotion label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#emotion label img {
+  padding: 3px;
+}
+
