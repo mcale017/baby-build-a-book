@@ -2,3 +2,5 @@
 DROP DATABASE IF EXISTS babybooks_db;
 -- Creates the "babybooks_db" database --
 CREATE DATABASE babybooks_db;
+
+INSERT INTO
