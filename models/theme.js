@@ -1,5 +1,12 @@
 module.exports = function (sequelize, DataTypes) {
     var Theme = sequelize.define("Theme", {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 160]
+            }
+        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,
