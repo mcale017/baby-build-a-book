@@ -1,0 +1,78 @@
+<!doctype html>
+ <html lang="en">
+
+<head>
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="../public/assets/js/basic.js"></script>
+    <link rel="stylesheet" href="../public/assets/css/double-page.css" />
+
+
+    </head>
+    <body>
+    
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div class="page" style="background-image:url(../public/assets/img/beach.jpg)">
+                    <h1>This is our book</h1>
+                    <div class="pagechar" style="background-image:url(../public/assets/img/Mia.png)"></div> </div>
+                <div class="double" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+                <div class="double" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+                <div class="double" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+                <div class="double" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+                <div class="double" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+                <div class="page" style="background-image:url(../public/assets/img/beach.jpg)"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript">
+    
+    function loadApp() {
+    
+        var flipbook = $('.flipbook');
+    
+         // Check if the CSS was already loaded
+        
+        if (flipbook.width()==0 || flipbook.height()==0) {
+            setTimeout(loadApp, 10);
+            return;
+        }
+    
+        $('.flipbook .double').scissor();
+    
+        // Create the flipbook
+    
+        $('.flipbook').turn({
+                // Elevation
+    
+                elevation: 50,
+                
+                // Enable gradients
+    
+                gradients: true,
+                
+                // Auto center this flipbook
+    
+                autoCenter: true
+    
+        });
+    }
+    
+    // Load the HTML4 version if there's not CSS transform
+    
+    yepnope({
+        test : Modernizr.csstransforms,
+        yep: ['../../lib/turn.min.js'],
+        nope: ['../../lib/turn.html4.min.js'],
+        both: ['../../lib/scissor.min.js', 'css/double-page.css'],
+        complete: loadApp
+    });
+    
+    </script>
+    
+    </body>
+    </html>
