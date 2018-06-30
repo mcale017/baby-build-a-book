@@ -6,17 +6,82 @@ body{
 	margin:0;
 	padding:0;
 }
-.booktitle {
-	color: rgba(172, 255, 47, 0.993);
+.booktitle{
+	position: absolute;
+	top: 7px;
+	left: 18px;}
+
+.titlechar {
+		height:200px;
+		position: relative;
+    	top: 175px;
+    	left: 225px;
+	}
+.p2char {
+	height:300px;
+	position: relative;
+    top: 16px;
+    left: 104px;
 }
 
-.pagechar{
+.p2text{
+	position: absolute;
+	top: 7px;
+	left: 18px;}
+
+.p3char {
+		height:300px;
+		position: relative;
+		top: 16px;
+		left: 104px;
+	}
+	
+.p3text{
+		position: absolute;
+		top: 7px;
+		left: 18px;
+	}
+
+.p4char {
+		height:300px;
+		position: relative;
+		top: 16px;
+		left: 104px;
+	}
+	
+.p4text{
+		position: absolute;
+		top: 7px;
+		left: 18px;
+	}
+
+.p5char {
+		height:300px;
+		position: relative;
+		top: 16px;
+		left: 104px;
+	}
+	
+.p5text{
+		position: absolute;
+		top: 7px;
+		left: 18px;
+	}
+
+
+.p6char {
+	height:300px;
 	position: relative;
-  	top: 10;
-	  left: 100;
-	  width:200px;
-	  height:300px;
+	top: 16px;
+	left: 104px;
 }
+
+.p6text{
+	position: absolute;
+	top: 7px;
+	left: 18px;
+}
+
 .flipbook-viewport{
 	overflow:hidden;
 	width:100%;
@@ -34,7 +99,7 @@ body{
 	width:800px;
 	height:400px;
 	left:-400px;
-	top:-200px;
+	top:-100px; 
 }
 
 .flipbook-viewport .page{
@@ -62,6 +127,13 @@ body{
 	user-select: none;
 	margin:0;
 }
+
+
+.charImg{
+	width:300px;
+	height:300px;
+}
+
 
 .flipbook-viewport .shadow{
 	-webkit-transition: -webkit-box-shadow 0.5s;
