@@ -8,7 +8,7 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/babybooks/:id", function(req, res) {
+    app.get("/books/:id", function(req, res) {
         db.Book.findOne({
             where: {
                 id: req.params.id
