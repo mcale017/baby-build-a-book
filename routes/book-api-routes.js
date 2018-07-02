@@ -7,7 +7,7 @@ module.exports = function(app) {
         });
     });
 
-    // Route for being able to create dummy data into books table
+    1
     app.get("/api/books/seeds", function(req, res) {
         db.Book.sync({force: true}).then(function() {
             db.Book.bulkCreate([
@@ -35,9 +35,29 @@ module.exports = function(app) {
     });
 
     app.post("/api/books", function(req, res) {
-        db.Book.create(req.body).then(function(dbBook) {
-            res.json(dbBook);
+        db.Theme.findOne({
+            where: {
+                name: req.body.name
+            }
+        }).then(function(dbTheme) {
+            var newBook = {
+                title: req.body.char_name + "'s " + dbTheme.title,
+                page1: req.body.bff_name + dbTheme.page1,
+                page2: req.body.fav_animal + dbTheme.page2,
+                page3: req.body.super_hero + dbTheme.page3,
+                page4: req.body.fav_color + dbTheme.page4,
+                page5: req.body.fav_food + dbTheme.page5,
+                page6: "hello" + dbTheme.page6
+            };
+
+            db.Book.create(newBook).then(function(dbBook) {
+                res.json(dbBook);
+            });
         });
+
+        // db.Book.create(req.body).then(function(dbBook) {
+        //     res.json(dbBook);
+        // });
     });
 
     app.delete("/api/books/:id", function(req, res) {
