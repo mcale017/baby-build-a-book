@@ -1,178 +1,372 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Baby Build a Book!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#avatar">Choose Your Avatar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#scenario">Choose Your Scenario</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+gut<!DOCTYPE html>
+<html lang="en">
 
-<header class="bg-primary text-white top">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Baby Build a Book!</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../public/assets/css/scrolling-nav.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../public/assets/css/main.css" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Capriola|Lato" rel="stylesheet">
+
+  
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Baby Build a Book!</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#avatar">Choose Your Avatar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#scenario">Choose Your Scenario</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white top">
     <div class="container text-center">
-        <h1>Welcome to Baby Build a Book!</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <h1>Welcome to Baby Build a Book!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-</header>
+  </header>
 
-<section id="about">
+  <section id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>About Baby Build a Book</h2>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi pariatur vero ipsum, eum aperiam quis corrupti
-                    ab optio sequi. Ipsum rem incidunt deleniti deserunt explicabo odit excepturi labore architecto reprehenderit.</p>
-                <ul>
-                    <li>Clickable nav links that smooth scroll to page sections</li>
-                    <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                    <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                    <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About Baby Build a Book</h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi pariatur vero ipsum, eum aperiam quis corrupti
+            ab optio sequi. Ipsum rem incidunt deleniti deserunt explicabo odit excepturi labore architecto reprehenderit.</p>
+          <ul>
+            <li>Clickable nav links that smooth scroll to page sections</li>
+            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+          </ul>
         </div>
-        <a href="#avatar" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
+      </div>
+      <a href="#avatar" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
     </div>
-</section>
+  </section>
 
-<section id="avatar" class="bg-light">
+  <section id="avatar" class="bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Choose your Avatar!</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam
-                    possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit
-                    dignissimos.
-                </p>
-                <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-                    <option value="https://2.bp.blogspot.com/-Qp-j3HWVTBY/WlvfAVu0fcI/AAAAAAABOzI/UEPHIlE2xukJFNHz0J_JHcj2YqPI1_OCACKgBGAs/s1600/mia-icon_tcm169-260913.png"
-                        width="100" alt="" class="image center-block">Mia</option>
-                    <option value="https://www.fisher-price.com/en_US/Images/eddie-icon_tcm169-260919.png" alt="" class="image center-block">Josh</option>
-                    <option value="http://richardholt.co/wp-content/uploads/2018/03/little-people-cartoon-preschool-to-fancy-draw-paint-koby-icon-tcm169-260918.png"
-                        alt="" class="image center-block">Eduardo</option>
-                    <option value="https://www.fisher-price.com/en_CA/Images/tessa-icon_tcm219-260920.png" width="100" alt="" class="image center-block">Abby</option>
-                    <option value="https://www.fisher-price.com/en_CA/Images/sofie-icon_tcm219-260912.png" width="100" alt="" class="image center-block">Sophie</option>
-                    <option value="https://2.bp.blogspot.com/-xcebQlkpx48/WlvfAYeDYqI/AAAAAAABOzI/dPnLnmFmFRcEcoqXRFXy42dMTEgkg0gDgCKgBGAs/s1600/Jack-icon_tcm169-307045.png"
-                        width="100" alt="" class="image center-block">Francois</option>
-                    <option value="https://www.fisher-price.com/en_US/Images/Emma-icon_tcm169-307044.png " width="100" alt="" class="image center-block">Elsa</option>
-                </select>
-                <br>
-                <br>
-                <img id="imageToSwap" class="profile center-block" src="https://i.pinimg.com/originals/84/dc/21/84dc211832b0edb607b755c934dcd1de.jpg"
-                    height="300" center>
-            </div>
-            <br>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Choose your Avatar!</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus
+            ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+          <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+            <option value="https://2.bp.blogspot.com/-Qp-j3HWVTBY/WlvfAVu0fcI/AAAAAAABOzI/UEPHIlE2xukJFNHz0J_JHcj2YqPI1_OCACKgBGAs/s1600/mia-icon_tcm169-260913.png"
+              width="100" alt="" class="image center-block">Mia</option>
+            <option value="https://www.fisher-price.com/en_US/Images/eddie-icon_tcm169-260919.png" alt="" class="image center-block">Josh</option>
+            <option value="http://richardholt.co/wp-content/uploads/2018/03/little-people-cartoon-preschool-to-fancy-draw-paint-koby-icon-tcm169-260918.png"
+              alt="" class="image center-block">Eduardo</option>
+            <option value="https://www.fisher-price.com/en_CA/Images/tessa-icon_tcm219-260920.png" width="100" alt="" class="image center-block">Abby</option>
+            <option value="https://www.fisher-price.com/en_CA/Images/sofie-icon_tcm219-260912.png" width="100" alt="" class="image center-block">Sophie</option>
+            <option value="https://2.bp.blogspot.com/-xcebQlkpx48/WlvfAYeDYqI/AAAAAAABOzI/dPnLnmFmFRcEcoqXRFXy42dMTEgkg0gDgCKgBGAs/s1600/Jack-icon_tcm169-307045.png"
+              width="100" alt="" class="image center-block">Francois</option>
+            <option value="https://www.fisher-price.com/en_US/Images/Emma-icon_tcm169-307044.png " width="100" alt="" class="image center-block">Elsa</option>
+          </select>
+          <br>
+          <br>
+          <img id="imageToSwap" class="profile center-block" src="https://i.pinimg.com/originals/84/dc/21/84dc211832b0edb607b755c934dcd1de.jpg"
+            height="300" center>
         </div>
-        <a href="#scenario" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
+        <br>
+      </div>
+      <a href="#scenario" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
     </div>
-</section>
+  </section>
 
-<section id="scenario">
+
+  <section id="scenario">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Choose Your Scenario!</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
-                    id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-                <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Choose Your Scenario!</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
+            id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+
+          <div class="container">
+            <div id="emotion">
+
+              <input type="radio" name="emotion" id="rain-btn" />
+              <label for="rain-btn">
+                <img src="/assets/img/rainforest.jpg" width="400" alt="" class="center-block">
+              </label>
+
+
+              <input type="radio" name="emotion" id="beach-btn" />
+              <label for="beach-btn">
+                <img src="/assets/img/beach.jpg" width="400" alt="" class="center-block">
+              </label>
+
+
+              <input type="radio" name="emotion" id="space-btn" />
+              <label for="space-btn">
+                <img src="/assets/img/space.jpg" width="400" alt="" class="center-block">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="container">
                     <div id="rainforest">
-                        <img src="/assets/img/rainforest.jpg" width="400" alt="" class="image center-block">
-                        <div class="overlay">
-                            <div class="text">Rainforest Adventure!</div>
-                        </div>
+                      <img src="../public/assets/img/rainforest.jpg" width="400" alt="" class="image center-block">
+                      <div class="overlay">
+                        <div class="text">Rainforest Adventure!</div>
+                      </div>
                     </div>
-                </div>
-                <br>
-                <div class="container">
+                  </div>
+                  <br>
+                  <div class="container">
                     <div id="beach">
-                        <img src="/assets/img/beach.jpg" width="400" height="300" alt="" class="image center-block">
-                        <div class="overlay">
-                            <div class="text">A Day on the Beach!</div>
-                        </div>
+                      <img src="../public/assets/img/beach.jpg" width="400" height="300" alt="" class="image center-block">
+                      <div class="overlay">
+                        <div class="text">A Day on the Beach!</div>
+                      </div>
                     </div>
-                </div>
-                <br>
-                <div class="container">
+                  </div>
+                  <br>
+                  <div class="container">
                     <div id="space">
-                        <img src="/assets/img/space.jpg" width="400" height="300" alt="" class="image center-block">
-                        <div class="overlay">
-                            <div class="text">Outer Space, Here I Come!</div>
-                        </div>
+                      <img src="../public/assets/img/space.jpg" width="400" height="300" alt="" class="image center-block">
+                      <div class="overlay">
+                        <div class="text">Outer Space, Here I Come!</div>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                  </div> -->
+  <!-- Code for user input -->
+  <center>
+    <form action="/action_page.php">
+      <center>
 
-    </div>
-</section>
+        <h1>Fill out the information below to create your unique story.</h1>
+        <br> First name:
+        <br>
+        <input type="text" name="firstname" value="">
+        <br>
+        <br> Best friend's name:
+        <br>
+        <input type="text" name="friendname" value="">
+        <br>
+        <br> Pet's name:
+        <br>
+        <input type="text" name="petname" value="">
+        <br>
+        <br> Favorite Color:
+        <br>
+        <input type="text" name="favcolor" value="">
+        <br>
+        <br> Favorite animal:
+        <br>
+        <input type="text" name="favanimal" value="">
+        <br>
+        <br> Favorite food:
+        <br>
+        <input type="text" name="favfood" value="">
+        <br>
+        <br> Select a language:
+        <br>
+        <select data-placeholder="Choose a Language...">
+          <option value="AF">Afrikanns</option>
+          <option value="SQ">Albanian</option>
+          <option value="AR">Arabic</option>
+          <option value="HY">Armenian</option>
+          <option value="EU">Basque</option>
+          <option value="BN">Bengali</option>
+          <option value="BG">Bulgarian</option>
+          <option value="CA">Catalan</option>
+          <option value="KM">Cambodian</option>
+          <option value="ZH">Chinese (Mandarin)</option>
+          <option value="HR">Croation</option>
+          <option value="CS">Czech</option>
+          <option value="DA">Danish</option>
+          <option value="NL">Dutch</option>
+          <option value="EN">English</option>
+          <option value="ET">Estonian</option>
+          <option value="FJ">Fiji</option>
+          <option value="FI">Finnish</option>
+          <option value="FR">French</option>
+          <option value="KA">Georgian</option>
+          <option value="DE">German</option>
+          <option value="EL">Greek</option>
+          <option value="GU">Gujarati</option>
+          <option value="HE">Hebrew</option>
+          <option value="HI">Hindi</option>
+          <option value="HU">Hungarian</option>
+          <option value="IS">Icelandic</option>
+          <option value="ID">Indonesian</option>
+          <option value="GA">Irish</option>
+          <option value="IT">Italian</option>
+          <option value="JA">Japanese</option>
+          <option value="JW">Javanese</option>
+          <option value="KO">Korean</option>
+          <option value="LA">Latin</option>
+          <option value="LV">Latvian</option>
+          <option value="LT">Lithuanian</option>
+          <option value="MK">Macedonian</option>
+          <option value="MS">Malay</option>
+          <option value="ML">Malayalam</option>
+          <option value="MT">Maltese</option>
+          <option value="MI">Maori</option>
+          <option value="MR">Marathi</option>
+          <option value="MN">Mongolian</option>
+          <option value="NE">Nepali</option>
+          <option value="NO">Norwegian</option>
+          <option value="FA">Persian</option>
+          <option value="PL">Polish</option>
+          <option value="PT">Portuguese</option>
+          <option value="PA">Punjabi</option>
+          <option value="QU">Quechua</option>
+          <option value="RO">Romanian</option>
+          <option value="RU">Russian</option>
+          <option value="SM">Samoan</option>
+          <option value="SR">Serbian</option>
+          <option value="SK">Slovak</option>
+          <option value="SL">Slovenian</option>
+          <option value="ES">Spanish</option>
+          <option value="SW">Swahili</option>
+          <option value="SV">Swedish </option>
+          <option value="TA">Tamil</option>
+          <option value="TT">Tatar</option>
+          <option value="TE">Telugu</option>
+          <option value="TH">Thai</option>
+          <option value="BO">Tibetan</option>
+          <option value="TO">Tonga</option>
+          <option value="TR">Turkish</option>
+          <option value="UK">Ukranian</option>
+          <option value="UR">Urdu</option>
+          <option value="UZ">Uzbek</option>
+          <option value="VI">Vietnamese</option>
+          <option value="CY">Welsh</option>
+          <option value="XH">Xhosa</option>
+        </select>
+        <br>
+        <!-- Create Story: -->
+        <br>
+        <input type="submit" value="Create Story">
+        <br>
+        <br>
+      </center>
+    </form>
+  </center>
+
 
 <center>
     <br>
     <br>
     <h1>Fill out the information below to create your unique story.</h1>
     <br>
-    <form class="create-form" action="#">
-        <div class="row uniform 50%">
+<form method="post" action="#">
+    <div class="row uniform 50%">
 
-            <div class="6u$ 12u$(small)">
-                <input type="text" name="name" id="char_name" value="" placeholder="Childs Name" />
-            </div>
+        <div class="6u$ 12u$(small)">
+            <input type="text" name="name" id="char_name" value="" placeholder="Childs Name" />
+        </div>
 
-            <div class="6u$ 12u$(small)">
-                <input type="text" name="bff_name" id="bff_name" value="" placeholder="Best Friends Name" />
-            </div>
+        <div class="6u$ 12u$(small)">
+            <input type="text" name="bff_name" id="bff_name" value="" placeholder="Best Friends Name" />
+        </div>
 
-            <div class="6u$ 12u$(small)">
+        <div class="6u$ 12u$(small)">
                 <input type="text" name="fav_animal" id="fav_animal" value="" placeholder="Favorite Animal" />
-            </div>
+        </div>
 
-            <div class="6u$ 12u$(small)">
+        <div class="6u$ 12u$(small)">
                 <input type="text" name="super_hero" id="super_hero" value="" placeholder="Hero or Favorite Character" />
-            </div>
+        </div>
 
-            <div class="6u$ 12u$(small)">
+        <div class="6u$ 12u$(small)">
                 <input type="text" name="fav_color" id="fav_color" value="" placeholder="Favorite Color" />
-            </div>
+        </div>
 
-            <div class="6u$ 12u$(small)">
+        <div class="6u$ 12u$(small)">
                 <input type="text" name="fav_food" id="fav_food" value="" placeholder="Favorite Food" />
-            </div>
         </div>
-        <br>
-        <br>
-        <div>
-            <div class="12u$">
-                <ul class="actions">
-                    <li>
-                        <input type="submit" value="Create Your Story" class="special" />
-                    </li>
-                    <li>
-                        <input type="submit" value="Clear" class="special" />
-                    </li>
-                </ul>
-            </div>
+     </div>
+<br>
+<br>
+     <div>
+        <div class="12u$">
+            <ul class="actions">
+                <li><input type="submit" value="Create Your Story" class="special" /></li>
+                <li><input type="submit" value="Clear" class="special" /></li>
+            </ul>
         </div>
+    </div>
 
-    </form>
+</form>
 
 </center>
 
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+</body>
+
+
+</body>
+<script>
+  $('#emotion input:radio').addClass('input_hidden');
+  $('#emotion label').click(function () {
+    $(this).addClass('selected').siblings().removeClass('selected');
+  });
+</script>
+=======
+<!-- Code for user input -->
+
+
+
+
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
     </div>
     <!-- /.container -->
 </footer>
+
+
+
+
+</html>
