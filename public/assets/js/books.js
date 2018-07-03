@@ -1,20 +1,20 @@
 // Content
-var db = require("../models");
-
 $(function () {
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
         var newBook = {
-            theme: $("name=theme]:checked").val().trim(),
-            title: $("#char_name").val().trim(),
-            page1: $("#bff_name").val().trim(),
-            page2: $("#fav_animal").val().trim(),
-            page3: $("#super_hero").val().trim(),
-            page4: $("#fav_color").val().trim(),
-            page5: $("#fav_food").val().trim(),
-            page6: "hello"
+            theme: $("[name=theme]:checked").val().trim(),
+            // character: $("[name=character]:checked").val().trim(),
+            name: $("#char_name").val().trim(),
+            bff_name: $("#bff_name").val().trim(),
+            fav_animal: $("#fav_animal").val().trim(),
+            super_hero: $("#super_hero").val().trim(),
+            fav_color: $("#fav_color").val().trim(),
+            fav_food: $("#fav_food").val().trim(),
         };
+
+        console.log(newBook);
 
         $.ajax("/api/books", {
             type: "POST",
