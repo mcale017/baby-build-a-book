@@ -37,7 +37,7 @@ module.exports = function(app) {
     app.post("/api/books", function(req, res) {
         db.Theme.findOne({
             where: {
-                name: req.body.name
+                name: req.body.theme
             }
         }).then(function(dbTheme) {
             var newBook = {
