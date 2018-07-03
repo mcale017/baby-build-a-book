@@ -11,11 +11,7 @@ module.exports = function(app) {
     app.get("/api/books/seeds", function(req, res) {
         db.Book.sync({force: true}).then(function() {
             db.Book.bulkCreate([
-                {title: 'title 1', page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'},
-                {title: 'title 2', page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'},
-                {title: 'title 3', page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'},
-                {title: 'title 4', page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'},
-                {title: 'title 5', page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'}            
+                {title: 'title 1', character: "hello", page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'}
             ]).then(() => {
                 return db.Book.findAll();
             }).then(books => {
@@ -37,11 +33,12 @@ module.exports = function(app) {
     app.post("/api/books", function(req, res) {
         db.Theme.findOne({
             where: {
-                name: req.body.name
+                name: req.body.theme
             }
         }).then(function(dbTheme) {
             var newBook = {
-                title: req.body.char_name + "'s " + dbTheme.title,
+                title: req.body.name + "'s " + dbTheme.title,
+                character: "test",
                 page1: req.body.bff_name + dbTheme.page1,
                 page2: req.body.fav_animal + dbTheme.page2,
                 page3: req.body.super_hero + dbTheme.page3,
