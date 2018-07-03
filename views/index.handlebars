@@ -88,15 +88,15 @@ gut<!DOCTYPE html>
             ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
           <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
             <option value="https://2.bp.blogspot.com/-Qp-j3HWVTBY/WlvfAVu0fcI/AAAAAAABOzI/UEPHIlE2xukJFNHz0J_JHcj2YqPI1_OCACKgBGAs/s1600/mia-icon_tcm169-260913.png"
-              width="100" alt="" class="image center-block">Mia</option>
-            <option value="https://www.fisher-price.com/en_US/Images/eddie-icon_tcm169-260919.png" alt="" class="image center-block">Josh</option>
+              width="100" name="mia" alt="" class="image center-block">Mia</option>
+            <option value="https://www.fisher-price.com/en_US/Images/eddie-icon_tcm169-260919.png" alt=""name="josh" class="image center-block">Josh</option>
             <option value="http://richardholt.co/wp-content/uploads/2018/03/little-people-cartoon-preschool-to-fancy-draw-paint-koby-icon-tcm169-260918.png"
-              alt="" class="image center-block">Eduardo</option>
-            <option value="https://www.fisher-price.com/en_CA/Images/tessa-icon_tcm219-260920.png" width="100" alt="" class="image center-block">Abby</option>
-            <option value="https://www.fisher-price.com/en_CA/Images/sofie-icon_tcm219-260912.png" width="100" alt="" class="image center-block">Sophie</option>
+              alt="" name="eduardo" class="image center-block">Eduardo</option>
+            <option value="https://www.fisher-price.com/en_CA/Images/tessa-icon_tcm219-260920.png" width="100" alt="" name="abby" class="image center-block">Abby</option>
+            <option value="https://www.fisher-price.com/en_CA/Images/sofie-icon_tcm219-260912.png" width="100" alt="" name="sophie" class="image center-block">Sophie</option>
             <option value="https://2.bp.blogspot.com/-xcebQlkpx48/WlvfAYeDYqI/AAAAAAABOzI/dPnLnmFmFRcEcoqXRFXy42dMTEgkg0gDgCKgBGAs/s1600/Jack-icon_tcm169-307045.png"
-              width="100" alt="" class="image center-block">Francois</option>
-            <option value="https://www.fisher-price.com/en_US/Images/Emma-icon_tcm169-307044.png " width="100" alt="" class="image center-block">Elsa</option>
+              width="100" alt="" name="francois" class="image center-block">Francois</option>
+            <option value="https://www.fisher-price.com/en_US/Images/Emma-icon_tcm169-307044.png " width="100" alt="" name="elsa" class="image center-block">Elsa</option>
           </select>
           <br>
           <br>
@@ -119,21 +119,21 @@ gut<!DOCTYPE html>
             id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
 
           <div class="container">
-            <div id="emotion">
+            <div id="theme">
 
-              <input type="radio" name="emotion" id="rain-btn" value="rainforest" />
+              <input type="radio" name="theme" id="rain-btn" value="rainforest" />
               <label for="rain-btn">
                 <img src="/assets/img/rainforest.jpg" width="400" alt="" class="center-block">
               </label>
 
 
-              <input type="radio" name="emotion" id="beach-btn" value="beach" />
+              <input type="radio" name="theme" id="beach-btn" value="beach" />
               <label for="beach-btn">
                 <img src="/assets/img/beach.jpg" width="400" alt="" class="center-block">
               </label>
 
 
-              <input type="radio" name="emotion" id="space-btn" value="space" />
+              <input type="radio" name="theme" id="space-btn" value="space" />
               <label for="space-btn">
                 <img src="/assets/img/space.jpg" width="400" alt="" class="center-block">
               </label>
@@ -208,8 +208,8 @@ gut<!DOCTYPE html>
 
 </body>
 <script>
-  $('#emotion input:radio').addClass('input_hidden');
-  $('#emotion label').click(function () {
+  $('#theme input:radio').addClass('input_hidden');
+  $('#theme label').click(function () {
     $(this).addClass('selected').siblings().removeClass('selected');
   });
 </script>
