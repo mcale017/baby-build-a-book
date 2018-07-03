@@ -6,8 +6,9 @@ $(function () {
         event.preventDefault();
 
         var newBook = {
-            theme: $("name=theme]:checked").val().trim(),
-            title: $("#char_name").val().trim(),
+            theme: $("[name=theme]:checked").val().trim(),
+            character: $("[name=character]:checked").val().trim(),
+            name: $("#char_name").val().trim(),
             page1: $("#bff_name").val().trim(),
             page2: $("#fav_animal").val().trim(),
             page3: $("#super_hero").val().trim(),
