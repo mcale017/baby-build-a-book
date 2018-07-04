@@ -1,15 +1,14 @@
 var db = require("../models");
-var path = require("path");
 
 module.exports = function(app) {
     app.get("/", function(req, res) {
-        res.render("index");
+        res.render("index", { css: ['bootstrap.min.css', 'index.css'], js: ['theme.js', 'index.js', 'scrolling-nav.js'] });
     });
 
     // Route to get all books on a list using books.handlebars
     app.get("/books", function(req, res) {
         db.Book.findAll({}).then(function(dbBook) {
-            res.render("books", dbBook);
+            res.render("books", { css: ['bootstrap.min.css', 'books.css'], bookObject: dbBook });
         });
     });
 
@@ -20,7 +19,7 @@ module.exports = function(app) {
                 id: req.params.id
             }
         }).then(function(dbBook) {
-            res.render("book", dbBook);
+            res.render("book", { css: ['bootstrap.min.css', 'book.css'], js: ['book.js'], bookObject: dbBook });
         });
     });
 };

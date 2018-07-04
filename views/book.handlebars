@@ -1,15 +1,55 @@
-{{!-- This handlebars is for displaying the actual book (single book) --}}
-
+{{!-- This handlebars is for displaying the actual book (single book) --}} {{!--
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <h2>Baby Books</h2>
 
             <ul>
-                {{#each Book}}
-                    {{title}}
-                {{/each}}
-            </ul> 
+                {{#bookObject}} character: {{character}}
+                <br> {{character}} {{/bookObject}}
+            </ul>
+        </div>
+    </div>
+</div> --}}
+
+{{#bookObject}}
+<div class="flipbook-viewport">
+    <div class="container">
+        <div class="flipbook">
+            <div class="page" style="background-image:url(/assets/img/beach.jpg)">
+                <img class="titlechar" src="/assets/img/Mia.png" />
+                <H1 id="booktitle">{{title}}</H1>
+            </div>
+
+            <div class="double" style="background-image:url(/assets/img/space.jpg)">
+                <img class="p2char" src="/assets/img/Mia.png" />
+                <H1 id="p2Text">{{page2}}</H1>
+            </div>
+
+            <div class="double" style="background-image:url(/assets/img/space.jpg)">
+                <img class="p3char" src="/assets/img/Mia.png" />
+                <H1 id="p3Text">Page 3 Story Text</H1>
+            </div>
+
+            <div class="double" style="background-image:url(/assets/img/space.jpg)">
+                <img class="p4char" src="/assets/img/Mia.png" />
+                <H1 id="p4Text">Page 4 Story Text</H1>
+            </div>
+
+            <div class="double" style="background-image:url(/assets/img/space.jpg)">
+                <img class="p5char" src="/assets/img/Mia.png" />
+                <H1 id="p5Text">Page 5 Story Text</H1>
+            </div>
+
+            <div class="double" style="background-image:url(/assets/img/space.jpg)">
+                <img class="p6char" src="/assets/img/Mia.png" />
+                <H1 id="p6Text">Page 6 Story Text</H1>
+            </div>
+
+            <div class="page">
+                <H1 id="endText"> .....To Be Continued ! </H1>
+            </div>
         </div>
     </div>
 </div>
+{{/bookObject}}
