@@ -1,17 +1,17 @@
 var db = require("../models");
 
-module.exports = function(app) {
-    app.get("/api/books", function(req, res) {
-        db.Book.findAll({}).then(function(dbBook) {
+module.exports = function (app) {
+    app.get("/api/books", function (req, res) {
+        db.Book.findAll({}).then(function (dbBook) {
             res.json(dbBook);
         });
     });
 
     1
-    app.get("/api/books/seeds", function(req, res) {
-        db.Book.sync({force: true}).then(function() {
+    app.get("/api/books/seeds", function (req, res) {
+        db.Book.sync({ force: true }).then(function () {
             db.Book.bulkCreate([
-                {title: 'title 1', character: "hello", page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6'}
+                { title: 'mock title', avatar: "hello", page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6' }
             ]).then(() => {
                 return db.Book.findAll();
             }).then(books => {
@@ -20,49 +20,45 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/api/books/:id", function(req, res) {
+    app.get("/api/books/:id", function (req, res) {
         db.Book.findOne({
             where: {
                 id: req.params.id
             }
-        }).then(function(dbBook) {
+        }).then(function (dbBook) {
             res.json(dbBook);
         });
     });
 
-    app.post("/api/books", function(req, res) {
+    app.post("/api/books", function (req, res) {
         db.Theme.findOne({
             where: {
                 name: req.body.theme
             }
-        }).then(function(dbTheme) {
+        }).then(theme => {
             var newBook = {
-                title: req.body.name + "'s " + dbTheme.title,
-                character: "test",
-                page1: req.body.bff_name + dbTheme.page1,
-                page2: req.body.fav_animal + dbTheme.page2,
-                page3: req.body.super_hero + dbTheme.page3,
-                page4: req.body.fav_color + dbTheme.page4,
-                page5: req.body.fav_food + dbTheme.page5,
-                page6: "hello" + dbTheme.page6
+                title: theme.title.replace("name", req.body.name),
+                avatar: "irrelevant for now",
+                page1: theme.page1,
+                page2: theme.page2,
+                page3: theme.page3,
+                page4: theme.page4,
+                page5: theme.page5,
+                page6: theme.page6
             };
 
             db.Book.create(newBook).then(function(dbBook) {
                 res.json(dbBook);
             });
         });
-
-        // db.Book.create(req.body).then(function(dbBook) {
-        //     res.json(dbBook);
-        // });
     });
 
-    app.delete("/api/books/:id", function(req, res) {
+    app.delete("/api/books/:id", function (req, res) {
         db.Book.destroy({
             where: {
                 id: req.params.id
             }
-        }).then(function(dbBook) {
+        }).then(function (dbBook) {
             res.json(dbBook);
         });
     });

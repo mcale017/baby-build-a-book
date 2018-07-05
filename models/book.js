@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 160]
             }
         },
-        character: {
+        avatar: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
