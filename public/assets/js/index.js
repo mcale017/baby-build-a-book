@@ -5,16 +5,15 @@ $(function () {
 
         var newBook = {
             theme: $("[name=theme]:checked").val().trim(),
-            // character: $("[name=character]:checked").val().trim(),
-            name: $("#char_name").val().trim(),
-            bff_name: $("#bff_name").val().trim(),
-            fav_animal: $("#fav_animal").val().trim(),
-            super_hero: $("#super_hero").val().trim(),
-            fav_color: $("#fav_color").val().trim(),
-            fav_food: $("#fav_food").val().trim(),
+            // avatar: $("[name=avatar]:checked").val().trim(),
+            name: $("#name").val().trim(),
+            bff: $("#bff").val().trim(),
+            animal: $("#animal").val().trim(),
+            character: $("#character").val().trim(),
+            color: $("#color").val().trim(),
+            food: $("#food").val().trim(),
+            activity: $("#activity").val().trim()
         };
-
-        console.log(newBook);
 
         $.ajax("/api/books", {
             type: "POST",
