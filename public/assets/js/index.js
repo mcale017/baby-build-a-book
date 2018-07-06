@@ -3,9 +3,11 @@ $(function () {
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
+        console.log($("#avatar-selection").val());
+
         var newBook = {
             theme: $("[name=theme]:checked").val().trim(),
-            // avatar: $("[name=avatar]:checked").val().trim(),
+            avatar: $("#avatar-selection").val(),
             name: $("#name").val().trim(),
             bff: $("#bff").val().trim(),
             animal: $("#animal").val().trim(),

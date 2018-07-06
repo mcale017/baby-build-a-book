@@ -98,15 +98,6 @@ header {
 .selected {
 	background-color: rgb(80, 207, 30);
 }
-  
-#emotion label {
-	display: inline-block;
-	cursor: pointer;
-}
-  
-#emotion label img {
-	padding: 3px;
-}
 
 /* Rest of the index.css */
 

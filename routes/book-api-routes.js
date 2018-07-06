@@ -38,7 +38,7 @@ module.exports = function (app) {
         }).then(function(dbTheme) {
             var newBook = {
                 title: dbTheme.title.replace("myName", req.body.name),
-                avatar: "irrelevant for now",
+                avatar: req.body.avatar,
                 theme: dbTheme.name,
                 page1: dbTheme.page1.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
                 page2: dbTheme.page2.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),

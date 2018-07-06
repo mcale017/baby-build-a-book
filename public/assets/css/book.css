@@ -9,14 +9,16 @@ body{
 #booktitle{
 	position: absolute;
 	top: 7px;
-	left: 18px;}
+	left: 18px;
+}
 
 .titlechar {
-		height:200px;
-		position: relative;
-    	top: 175px;
-    	left: 225px;
-	}
+	height:200px;
+	position: relative;
+    top: 175px;
+    left: 225px;
+}
+
 .p2char {
 	height:300px;
 	position: relative;
@@ -30,43 +32,43 @@ body{
 	left: 18px;}
 
 .p3char {
-		height:300px;
-		position: relative;
-		top: 16px;
-		left: 104px;
-	}
+	height:300px;
+	position: relative;
+	top: 16px;
+	left: 104px;
+}
 	
 #p3text{
-		position: absolute;
-		top: 7px;
-		left: 18px;
-	}
+	position: absolute;
+	top: 7px;
+	left: 18px;
+}
 
 .p4char {
-		height:300px;
-		position: relative;
-		top: 16px;
-		left: 104px;
-	}
+	height:300px;
+	position: relative;
+	top: 16px;
+	left: 104px;
+}
 	
 #p4text{
-		position: absolute;
-		top: 7px;
-		left: 18px;
-	}
+	position: absolute;
+	top: 7px;
+	left: 18px;
+}
 
 .p5char {
-		height:300px;
-		position: relative;
-		top: 16px;
-		left: 104px;
-	}
+	height:300px;
+	position: relative;
+	top: 16px;
+	left: 104px;
+}
 	
 #p5text{
-		position: absolute;
-		top: 7px;
-		left: 18px;
-	}
+	position: absolute;
+	top: 7px;
+	left: 18px;
+}
 
 
 .p6char {

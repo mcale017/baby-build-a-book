@@ -1,55 +1,41 @@
-{{!-- This handlebars is for displaying the actual book (single book) --}} {{!--
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Baby Books</h2>
-
-            <ul>
-                {{#bookObject}} character: {{character}}
-                <br> {{character}} {{/bookObject}}
-            </ul>
-        </div>
-    </div>
-</div> --}}
-
-
+{{!-- This handlebars is for displaying the actual book (single book) --}}
 
 {{#bookObject}}
 <div class="flipbook-viewport">
     <div class="container">
         <div class="flipbook">
             <div class="page" style="background-image:url(/assets/img/{{theme}}_page1.jpg)">
-                <img class="titlechar" src="/assets/img/Mia.png" />
+                <img class="titlechar" src="{{avatar}}" />
                 <H1 id="booktitle">{{title}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page2.jpg)">
-                <img class="p2char" src="/assets/img/Mia.png" />
+                <img class="p2char" src="{{avatar}}" />
                 <H1 id="p2Text">{{page1}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page2.jpg)">
-                <img class="p2char" src="/assets/img/Mia.png" />
+                <img class="p2char" src="{{avatar}}" />
                 <H1 id="p2Text">{{page2}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page3.jpg)">
-                <img class="p3char" src="/assets/img/Mia.png" />
+                <img class="p3char" src="{{avatar}}" />
                 <H1 id="p3Text">{{page3}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page4.jpg)">
-                <img class="p4char" src="/assets/img/Mia.png" />
+                <img class="p4char" src="{{avatar}}" />
                 <H1 id="p4Text">{{page4}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page5.jpg)">
-                <img class="p5char" src="/assets/img/Mia.png" />
+                <img class="p5char" src="{{avatar}}" />
                 <H1 id="p5Text">{{page5}}</H1>
             </div>
 
             <div class="double" style="background-image:url(/assets/img/{{theme}}_page6.jpg)">
-                <img class="p6char" src="/assets/img/Mia.png" />
+                <img class="p6char" src="{{avatar}}" />
                 <H1 id="p6Text">{{page6}}</H1>
             </div>
 

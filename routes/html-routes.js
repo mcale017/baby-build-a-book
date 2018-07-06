@@ -19,7 +19,7 @@ module.exports = function(app) {
                 id: req.params.id
             }
         }).then(function(dbBook) {
-            res.render("book", { css: ['bootstrap.min.css', 'book.css'], js: ['book.js'], bookObject: dbBook });
+            res.render("book", { css: ['bootstrap.min.css', 'book.css'], js: ['book.js'],bookObject: dbBook });
         });
     });
 };
