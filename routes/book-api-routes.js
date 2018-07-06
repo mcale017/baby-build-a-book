@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.get("/api/books/seeds", function (req, res) {
         db.Book.sync({ force: true }).then(function () {
             db.Book.bulkCreate([
-                { title: 'mock title', avatar: "hello", page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6' }
+                { title: 'mock title', avatar: "hello", theme: "rainforest", page1: 'page 1', page2: 'page 2', page3: 'page 3', page4: 'page 4', page5: 'page 5', page6: 'page 6' }
             ]).then(() => {
                 return db.Book.findAll();
             }).then(books => {
@@ -39,6 +39,7 @@ module.exports = function (app) {
             var newBook = {
                 title: dbTheme.title.replace("myName", req.body.name),
                 avatar: "irrelevant for now",
+                theme: dbTheme.name,
                 page1: dbTheme.page1.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
                 page2: dbTheme.page2.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
                 page3: dbTheme.page3.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),

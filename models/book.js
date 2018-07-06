@@ -14,6 +14,13 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
+        theme: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         page1: {
             type: DataTypes.TEXT,
             allowNull: false,
