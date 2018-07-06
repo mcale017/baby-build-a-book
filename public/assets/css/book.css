@@ -1,97 +1,122 @@
 /* Basic sample */
 
-body{
+body {
 	overflow:hidden;
 	background-color:#b6e6f1;
 	margin:0;
 	padding:0;
 }
-#booktitle{
+#booktitle {
 	position: absolute;
-	top: 7px;
-	left: 18px;
+    top: 30px;
+    left: 18px;
+    text-align: center;
+    color: black;
+	font-weight: bold;
 }
 
 .titlechar {
-	height:200px;
+	height: 200px;
+    position: relative;
+    top: 200px;
+    left: 8px;
+}
+
+.p1char {
+	height: 250px;
+    position: relative;
+    top: 100px;
+    left: 475px;
+}
+	
+#p1Text {
 	position: relative;
-    top: 175px;
-    left: 225px;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
 }
 
 .p2char {
-	height:300px;
-	position: relative;
-    top: 16px;
-    left: 104px;
+	height: 180px;
+    position: relative;
+    top: 1px;
+    left: 275px;
 }
 
-#p2text{
-	position: absolute;
-	top: 7px;
-	left: 18px;}
-
-.p3char {
-	height:300px;
+#p2Text {
 	position: relative;
-	top: 16px;
-	left: 104px;
-}
-	
-#p3text{
-	position: absolute;
 	top: 7px;
 	left: 18px;
+	text-align: center;
+    color: white;
+	font-weight: bold;
+}
+
+.p3char {
+	height: 250px;
+    position: relative;
+    top: 75px;
+    left: 200px;
+}
+	
+#p3Text{
+		position: relative;
+		top: 7px;
+		left: 18px;
+		color:white;
 }
 
 .p4char {
-	height:300px;
-	position: relative;
-	top: 16px;
-	left: 104px;
+	height: 225px;
+    position: relative;
+    top: 12px;
+    left: 600px;
 }
 	
-#p4text{
-	position: absolute;
-	top: 7px;
-	left: 18px;
+#p4Text {
+		position: relative;
+		top: 7px;
+		left: 18px;
+		color:white
 }
 
 .p5char {
-	height:300px;
-	position: relative;
-	top: 16px;
-	left: 104px;
-}
+	height: 250px;
+    position: relative;
+    top: 15px;
+    left: 275px;
+	}
 	
-#p5text{
-	position: absolute;
-	top: 7px;
-	left: 18px;
+#p5Text {
+		position: relative;
+		top: 7px;
+		left: 18px;
+		color:white
 }
-
 
 .p6char {
-	height:300px;
-	position: relative;
-	top: 16px;
-	left: 104px;
+	height: 250px;
+    position: relative;
+    top: 20px;
+    left: 50px;
 }
 
-#p6text{
-	position: absolute;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: pink;
-	top: 7px;
-	left: 18px;
+#p6Text{
+	position: relative;
+    color: hotpink;
+    top: -25px;
+    left: 18px;
+    font-size: xx-large;
 }
 
 #endText{
 	position: absolute;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: pink;
-	top: 7px;
-	left: 18px;
+    top: 30px;
+    left: 18px;
+    text-align: center;
+    color: black;
+	font-weight: bold;
 }
 
 .flipbook-viewport{
