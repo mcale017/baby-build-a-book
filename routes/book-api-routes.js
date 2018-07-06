@@ -35,16 +35,16 @@ module.exports = function (app) {
             where: {
                 name: req.body.theme
             }
-        }).then(theme => {
+        }).then(function(dbTheme) {
             var newBook = {
-                title: theme.title.replace("name", req.body.name),
+                title: dbTheme.title.replace("myName", req.body.name),
                 avatar: "irrelevant for now",
-                page1: theme.page1,
-                page2: theme.page2,
-                page3: theme.page3,
-                page4: theme.page4,
-                page5: theme.page5,
-                page6: theme.page6
+                page1: dbTheme.page1.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
+                page2: dbTheme.page2.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
+                page3: dbTheme.page3.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
+                page4: dbTheme.page4.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
+                page5: dbTheme.page5.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity),
+                page6: dbTheme.page6.replace("myName", req.body.name).replace("myBff", req.body.bff).replace("myAnimal", req.body.animal).replace("myCharacter", req.body.character).replace("myColor", req.body.color).replace("myFood", req.body.food).replace("myActivity", req.body.activity)
             };
 
             db.Book.create(newBook).then(function(dbBook) {
