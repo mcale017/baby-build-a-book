@@ -10,9 +10,10 @@ body {
 	position: absolute;
     top: 30px;
     left: 18px;
-    text-align: center;
-    color: black;
+	text-align: center;
+    color: yellow;
 	font-weight: bold;
+	font-size: xxxxx-large;
 }
 
 .titlechar {
@@ -32,9 +33,11 @@ body {
 #p1Text {
 	position: relative;
     top: 10px;
-    left: 20px;
-    color: white;
-    font-weight: bold;
+    left: 20px;	
+	text-align: left;
+    color: yellow;
+	font-weight: normal;
+	font-size: x-large;
 }
 
 .p2char {
@@ -48,9 +51,10 @@ body {
 	position: relative;
 	top: 7px;
 	left: 18px;
-	text-align: center;
-    color: white;
-	font-weight: bold;
+	text-align: left;
+    color: yellow;
+	font-weight: normal;
+	font-size: x-large;
 }
 
 .p3char {
@@ -64,7 +68,10 @@ body {
 		position: relative;
 		top: 7px;
 		left: 18px;
-		color:white;
+		text-align: left;
+		color: yellow;
+		font-weight: normal;
+		font-size: x-large;
 }
 
 .p4char {
@@ -78,7 +85,10 @@ body {
 		position: relative;
 		top: 7px;
 		left: 18px;
-		color:white
+		text-align: left;
+		color: yellow;
+		font-weight: normal;
+		font-size: x-large;
 }
 
 .p5char {
@@ -92,7 +102,10 @@ body {
 		position: relative;
 		top: 7px;
 		left: 18px;
-		color:white
+		text-align: left;
+		color: yellow;
+		font-weight: normal;
+		font-size: x-large;
 }
 
 .p6char {
@@ -104,10 +117,12 @@ body {
 
 #p6Text{
 	position: relative;
-    color: hotpink;
     top: -25px;
     left: 18px;
-    font-size: xx-large;
+	text-align: left;
+    color: yellow;
+	font-weight: normal ;
+	font-size: x-large;
 }
 
 #endText{
@@ -115,8 +130,9 @@ body {
     top: 30px;
     left: 18px;
     text-align: center;
-    color: black;
+    color: yellow;
 	font-weight: bold;
+	font-size: xxxx-large;
 }
 
 .flipbook-viewport{
