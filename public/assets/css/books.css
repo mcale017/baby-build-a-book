@@ -1,0 +1,20 @@
+.page1 {
+	height: 300px;
+    position: relative;
+    top: 200px;
+    left: 8px;
+}
+
+.avImg {
+	height: 200px;
+    position: relative;
+    top: 225px;
+    left: -300px;
+}
+
+.listText  {
+	height: 200px;
+    position: absolute;
+    top: 225px;
+    left: -300px;
+}
