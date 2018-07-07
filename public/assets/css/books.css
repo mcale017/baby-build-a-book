@@ -1,20 +1,21 @@
-.page1 {
-	height: 300px;
-    position: relative;
-    top: 200px;
-    left: 8px;
+body {
+    background-image: url("/assets/img/background2.jpg");
+    background-position: center bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.avImg {
-	height: 200px;
-    position: relative;
-    top: 225px;
-    left: -300px;
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
 }
 
-.listText  {
-	height: 200px;
+.avatar-image {
     position: absolute;
-    top: 225px;
-    left: -300px;
+    top: 33%;
+    left: 33%;
+    width: 100px;
+    height: auto;
 }

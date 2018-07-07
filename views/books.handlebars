@@ -20,19 +20,30 @@
   </div>
 </nav>
 
+<br><br><br><br>
+
 <div class="container-fluid">
   <div class="row">
     {{#each bookObject}}
     <div class="col-lg-6">
-      <div class="thumbnail">
-        <img class="page1" src="/assets/img/{{theme}}_page1.jpg">
-        <img class="avImg" src="{{avatar}}">
+      {{!--
+      <div class="thumbnail bookThumbnail">
+        <img class="theme" src="/assets/img/{{theme}}_page1.jpg">
+        <img class="avatar" src="{{avatar}}">
         <div class="caption">
           <a href="/books/{{id}}">
-            <h3 class="listText">{{title}}</h3>
+            <h3>{{title}}</h3>
           </a>
         </div>
+      </div> --}}
+      <div class="card" style="width: 50%">
+        <img class="card-img-top" src="/assets/img/{{theme}}_page1.jpg">
+        <img class="avatar-image" src="{{avatar}}">
+        <div class="card-body" style="background-color: #f9f1f1">
+          <a href="/books/{{id}}" class="btn btn-primary">{{title}}</a>
+        </div>
       </div>
+      <br><br><br><br>
     </div>
     {{/each}}
   </div>
@@ -40,6 +51,6 @@
 
 <footer class="py-5 bg-dark">
   <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; Baby Build a Book 2017</p>
+    <p class="m-0 text-center text-white">Copyright &copy; R2-K2 Development 2018</p>
   </div>
 </footer>

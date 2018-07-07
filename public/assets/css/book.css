@@ -5,7 +5,13 @@ body {
 	background-color:#b6e6f1;
 	margin:0;
 	padding:0;
+	background-image: url("/assets/img/background1.jpg");
+	background-position: center bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 #booktitle {
 	position: absolute;
     top: 30px;
@@ -32,7 +38,7 @@ body {
 	
 #p1Text {
 	position: relative;
-    top: 1px;
+    top: -95px;
     left: 10px;	
     color: yellow;
 }
@@ -46,7 +52,7 @@ body {
 
 #p2Text {
 	position: relative;
-    top: 1px;
+    top: -45px;
     left: 10px;	
     color: yellow;
 }
@@ -74,7 +80,7 @@ body {
 	
 #p4Text {
 	position: relative;
-    top: 1px;
+    top: -95px;
     left: 10px;	
     color: yellow;
 }
@@ -88,7 +94,7 @@ body {
 	
 #p5Text {
 	position: relative;
-    top: 1px;
+    top: -95px;
     left: 10px;	
     color: yellow;
 }
