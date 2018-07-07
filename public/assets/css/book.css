@@ -32,12 +32,12 @@ body {
 	
 #p1Text {
 	position: relative;
-    top: 10px;
-    left: 20px;	
+    top: 1px;
+    left: 10px;	
 	text-align: left;
     color: yellow;
-	font-weight: normal;
-	font-size: x-large;
+
+	
 }
 
 .p2char {
@@ -49,12 +49,10 @@ body {
 
 #p2Text {
 	position: relative;
-	top: 7px;
-	left: 18px;
+    top: 1px;
+    left: 10px;	
 	text-align: left;
     color: yellow;
-	font-weight: normal;
-	font-size: x-large;
 }
 
 .p3char {
@@ -65,13 +63,11 @@ body {
 }
 	
 #p3Text{
-		position: relative;
-		top: 7px;
-		left: 18px;
-		text-align: left;
-		color: yellow;
-		font-weight: normal;
-		font-size: x-large;
+	position: relative;
+    top: 1px;
+    left: 10px;	
+	text-align: left;
+    color: yellow;
 }
 
 .p4char {
@@ -82,13 +78,11 @@ body {
 }
 	
 #p4Text {
-		position: relative;
-		top: 7px;
-		left: 18px;
-		text-align: left;
-		color: yellow;
-		font-weight: normal;
-		font-size: x-large;
+	position: relative;
+    top: 1px;
+    left: 10px;	
+	text-align: left;
+    color: yellow;
 }
 
 .p5char {
@@ -99,13 +93,11 @@ body {
 	}
 	
 #p5Text {
-		position: relative;
-		top: 7px;
-		left: 18px;
-		text-align: left;
-		color: yellow;
-		font-weight: normal;
-		font-size: x-large;
+	position: relative;
+    top: 1px;
+    left: 10px;	
+	text-align: left;
+    color: yellow;
 }
 
 .p6char {
@@ -117,12 +109,10 @@ body {
 
 #p6Text{
 	position: relative;
-    top: -25px;
-    left: 18px;
+    top: 1px;
+    left: 10px;	
 	text-align: left;
     color: yellow;
-	font-weight: normal ;
-	font-size: x-large;
 }
 
 #endText{
