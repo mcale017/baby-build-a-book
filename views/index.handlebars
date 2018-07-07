@@ -1,289 +1,225 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Baby Build a Book!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/books">List of all Baby Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/api/books">API Books</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<head>
+<header class="bg-primary text-white top">
+    <div class="container text-center">
+        <h1>Welcome to Baby Build a Book!</h1>
+        <p class="lead">A site where you can create a personalized story for your one-of-a-kind child.</p>
+    </div>
+</header>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Baby Build a Book!</title>
-</head>
-
-<body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Baby Build a Book!</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/books">List of all Baby Books</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/api/books">API Books</a>
-                    </li>
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>About Baby Build a Book</h2>
+                <p class="lead">Baby Build a Book was created with the belief that every kid deserves a story where she or he gets to be
+                    star of the show!
+                </p>
+                <ul>
+                    <li>Choose a unique avatar that looks like your child.</li>
+                    <li>Choose a fun theme for your story.</li>
+                    <li>Enter information about some of your child's favorite things.</li>
+                    <li>Generate your special story for your one-of-a-kind, favorite little human.</li>
+                    <li>Print it out, and share with your family and friends!</li>
                 </ul>
             </div>
         </div>
-    </nav>
+        <a href="#avatar" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
+    </div>
+</section>
 
-    <header class="bg-primary text-white top">
-        <div class="container text-center">
-            <h1>Welcome to Baby Build a Book!</h1>
-            <p class="lead">A site where you can create personalized story for your one-of-a-kind child.</p>
-        </div>
-    </header>
+<form class="create-form">
 
-    <section id="about">
+    <section id="avatar" class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h2>About Baby Build a Book</h2>
-                    <p class="lead">Baby Build a Book was created with the belief that every kid deserves a story where she or he gets to
-                        be star of the show!
-                    </p>
-                    <ul>
-                        <li>Create a unique avatar that looks like your child.</li>
-                        <li>Choose a fun theme for your story.</li>
-                        <li>Enter information about some of your child's favorite things.</li>
-                        <li>Generate your special story for your one-of-a-kind, favorite little human.</li>
-                        <li>Print it out, and share with your family and friends!</li>
-                    </ul>
+                    <h2>Choose Your Avatar!</h2>
+                    <p class="lead">Choose from a variety of avatars</p>
+                    <select id="avatar-selection" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+                        <option selected="true" value="" disabled="disabled">Choose an Avatar</option>
+                        <option value="/assets/img/Mia.jpg" width="100" alt="" class="image center-block">Mia</option>
+                        <option value="/assets/img/Josh.jpg" alt="" class="image center-block">Josh</option>
+                        <option value="/assets/img/Eduardo.jpg" alt="" class="image center-block">Eduardo</option>
+                        <option value="/assets/img/Abby.jpg" width="100" alt="" class="image center-block">Abby</option>
+                        <option value="/assets/img/Sophie.jpg" width="100" alt="" class="image center-block">Sophie</option>
+                        <option value="/assets/img/Francois.jpg" width="100" alt="" class="image center-block">Francois</option>
+                        <option value="/assets/img/Elsa.jpg" width="100" alt="" class="image center-block">Elsa</option>
+                    </select>
+                    <br>
+                    <br>
+                    <img id="imageToSwap" class="profile center-block" src="/assets/img/Group-Picture.jpg" height="300" center>
                 </div>
+                <br>
             </div>
-            <a href="#avatar" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
+            <a href="#scenario" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
         </div>
     </section>
 
-    <form class="create-form">
-
-        <section id="avatar" class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>Build your avatar!</h2>
-                        <p class="lead">Choose from a variety of characteristics to build an avatar that looks like your child.
-                        </p>
-                        <select id="avatar-selection" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-                            <option value="/assets/img/Mia.jpg" width="100" alt="" class="image center-block">Mia</option>
-                            <option value="/assets/img/Josh.jpg" alt="" class="image center-block">Josh</option>
-                            <option value="/assets/img/Eduardo.jpg" alt="" class="image center-block">Eduardo</option>
-                            <option value="/assets/img/Abby.jpg" width="100" alt="" class="image center-block">Abby</option>
-                            <option value="/assets/img/Sophie.jpg" width="100" alt="" class="image center-block">Sophie</option>
-                            <option value="/assets/img/Francois.jpg" width="100" alt="" class="image center-block">Francois</option>
-                            <option value="/assets/img/Elsa.jpg" width="100" alt="" class="image center-block">Elsa</option>
-                        </select>
-                        <br>
-                        <br>
-                        <img id="imageToSwap" class="profile center-block" src="/assets/img/Group-Picture.jpg" height="300" center>
-                    </div>
-                    <br>
-                </div>
-                <a href="#scenario" class="btn btn-info js-scroll-trigger" style="margin-top: 5px;" role='button'>Next</a>
-            </div>
-        </section>
-
-        <section id="scenario">
-            {{!-- <div class="container"> --}}
-                {{!-- <div class="row"> --}}
-                    <div class="col-lg-8 mx-auto">
-                        <h2>Choose your storyline!</h2>
-                        <p class="lead">Your child's adventure can take place anywhere!</p>
-
-
-
-{{!-- <div class="container"> --}}
-        {{!-- <div id="theme"> --}}     
-<section>
-<div class="row"> 
-    <div class="column">
-            <input type="radio" name="theme" id="beach-btn" value="beach" />
-            <label for="beach-btn">
-      <img src="/assets/img/beach_page1.jpg" width="600" height="400" >
-            </label>
-                <div class="column">
-            <input type="radio" name="theme" id="beach-btn" value="beach" />
-            <label for="beach-btn">
-      <img src="/assets/img/rainforest_page1.jpg" width="600" height="400" >
-            </label>
-                </div>
-
-    </div> 
-    <div class="column">
-            <input type="radio" name="theme" id="beach-btn" value="beach" />
-            <label for="beach-btn">
-      <img src="/assets/img/space_page1.jpg" width="600" height="400" >
-            </label>
-                <div class="column">
-            <input type="radio" name="theme" id="beach-btn" value="beach" />
-            <label for="beach-btn">
-      <img src="/assets/img/park.jpg" width="600" height="400" >
-            </label>
-                </div>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-                        {{!-- <div class="container">
-                            <div id="theme">
-
-                                <input type="radio" name="theme" id="rain-btn" value="rainforest" />
-                                <label for="rain-btn">
-                                    <img src="/assets/img/rainforest_page1.jpg" width="600" height="400" alt="" class="center-block">
-                                </label>
-
-                                <input type="radio" name="theme" id="beach-btn" value="beach" />
-                                <label for="beach-btn">
-                                    <img src="/assets/img/beach_page1.jpg" width="600" height="400" alt="" class="center-block">
-                                </label>
-
-                                <input type="radio" name="theme" id="space-btn" value="space" />
-                                <label for="space-btn">
-                                    <img src="/assets/img/space_page1.jpg" width="600" height="400" alt="" class="center-block">
-                                </label>
-
-                                <input type="radio" name="theme" id="space-btn" value="park" />
-                                <label for="space-btn">
-                                    <img src="/assets/img/park.jpg" width="600"  height="400" alt="pic"  class="center-block">
-                                </label>
-
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="inputs">
-            <center>
-
-                <br>
-                <br>
-                <h1>Fill out the information below to create your unique story.</h1>
-                <br>
-
-                <div class="row uniform 50%">
-
-                    <br>
-
+    <section id="scenario">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Choose Your Theme!</h2>
+                    <p class="lead">Your child's adventure can take place anywhere!</p>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 mx-auto"></div>
+                        <div id="theme">
+                            <input type="radio" name="theme" id="rain-btn" value="rainforest" />
+                            <label for="rain-btn">
+                                <img src="/assets/img/rainforest_page1.jpg" width="600" height="400" alt="" class="center-block">
+                            </label>
 
-                            <div class="form-group  col-lg-12 row">
-                                <label class="col-lg-4 col-form-label">Child's Name</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="name" placeholder="Child's Name">
-                                </div>
-                            </div>
+                            <input type="radio" name="theme" id="beach-btn" value="beach" />
+                            <label for="beach-btn">
+                                <img src="/assets/img/beach_page1.jpg" width="600" height="400" alt="" class="center-block">
+                            </label>
 
-                            <br>
-                            <br>
+                            <input type="radio" name="theme" id="space-btn" value="space" />
+                            <label for="space-btn">
+                                <img src="/assets/img/space_page1.jpg" width="600" height="400" alt="" class="center-block">
+                            </label>
 
-                            <div class="form-group col-lg-12  row">
-                                <label class="col-lg-4 col-form-label">Best Friend's Name</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="bff" placeholder="Best Friend's Name">
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="form-group col-lg-12 row">
-                                <label class="col-lg-4 col-form-label">Favorite Animal</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="animal" placeholder="Favorite Animal">
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="form-group col-lg-12 row">
-                                <label class="col-lg-4 col-form-label">Favorite Character</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="character" placeholder="Favorite Character (hero, cartoon, etc.)">
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="form-group  col-lg-12  row">
-                                <label class="col-lg-4 col-form-label">Favorite Color</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="color" placeholder="Favorite Color">
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="form-group  col-lg-12 row">
-                                <label class="col-lg-4 col-form-label">Favorite Food</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="food" placeholder="Favorite Food">
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="form-group col-lg-12 row">
-                                <label class="col-lg-4 col-form-label">Favorite Activity</label>
-                                <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="activity" placeholder="Favorite Activity">
-                                </div>
-                            </div>
-
-                            <br>
-                            <br>
-
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-8 mx-auto">
-                                        <input type="submit" value="Create Your Story" class="special" />
-                                    </div>
-                                </div>
-                            </div>
-
+                            <input type="radio" name="theme" id="space-btn" value="park" />
+                            <label for="space-btn">
+                                <img src="/assets/img/park.jpg" width="600" height="400" alt="" class="center-block">
+                            </label>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-            </center>
+    <section id="inputs" class="bg-light">
+        <center>
 
-        </section>
+            <br>
+            <br>
+            <h1>Fill out the information below to create your unique story.</h1>
+            <br>
 
-    </form>
+            <div class="row uniform 50%">
 
-</body>
+                <br>
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto"></div>
 
+                        <div class="form-group  col-lg-12 row">
+                            <label class="col-lg-4 col-form-label">Child's Name</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="name" placeholder="Child's Name">
+                            </div>
+                        </div>
 
- <img class="profile center-block" src="/assets/img/Group-Picture2.jpg" height="300" center>
+                        <br>
+                        <br>
 
+                        <div class="form-group col-lg-12  row">
+                            <label class="col-lg-4 col-form-label">Best Friend's Name</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="bff" placeholder="Best Friend's Name">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-group col-lg-12 row">
+                            <label class="col-lg-4 col-form-label">Favorite Animal</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="animal" placeholder="Favorite Animal">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-group col-lg-12 row">
+                            <label class="col-lg-4 col-form-label">Favorite Character</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="character" placeholder="Favorite Character (hero, cartoon, etc.)">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-group  col-lg-12  row">
+                            <label class="col-lg-4 col-form-label">Favorite Color</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="color" placeholder="Favorite Color">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-group  col-lg-12 row">
+                            <label class="col-lg-4 col-form-label">Favorite Food</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="food" placeholder="Favorite Food">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group col-lg-12 row">
+                            <label class="col-lg-4 col-form-label">Favorite Activity</label>
+                            <div class="col-lg-8 mx-auto">
+                                <input type="text" class="form-control" id="activity" placeholder="Favorite Activity">
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <input type="submit" value="Create Your Story" class="special" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </center>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <img class="profile center-block" src="/assets/img/Group-Picture2.jpg" height="300" center>
+
+    </section>
+
+</form>
 
 <br>
 
-
 <footer class="py-5 bg-dark">
     <div class="container">
-
         <p class="m-0 text-center text-white">Copyright &copy; Baby Build a Book 2017</p>
-
     </div>
-
 </footer>
-
-</html>
