@@ -21,19 +21,21 @@
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
-      {{#each bookObject}}
-        <div class="col-lg-6">
-          <div class="thumbnail">
-            <img class = "page1" src="/assets/img/{{theme}}_page1.jpg">
-            <img class ="avImg" src="{{avatar}}">
-            <div class="caption">
-              <a href="/books/{{id}}"><h3 class="listText">{{title}}</h3></a>
-            </div>
-          </div>
+  <div class="row">
+    {{#each bookObject}}
+    <div class="col-lg-6">
+      <div class="thumbnail">
+        <img class="page1" src="/assets/img/{{theme}}_page1.jpg">
+        <img class="avImg" src="{{avatar}}">
+        <div class="caption">
+          <a href="/books/{{id}}">
+            <h3 class="listText">{{title}}</h3>
+          </a>
         </div>
+      </div>
+    </div>
     {{/each}}
-</div>
+  </div>
 </div>
 
 <footer class="py-5 bg-dark">
