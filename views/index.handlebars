@@ -97,30 +97,74 @@
         </section>
 
         <section id="scenario">
-            <div class="container">
-                <div class="row">
+            {{!-- <div class="container"> --}}
+                {{!-- <div class="row"> --}}
                     <div class="col-lg-8 mx-auto">
                         <h2>Choose your storyline!</h2>
                         <p class="lead">Your child's adventure can take place anywhere!</p>
 
-                        <div class="container">
+
+
+{{!-- <div class="container"> --}}
+        {{!-- <div id="theme"> --}}     
+<section>
+<div class="row"> 
+    <div class="column">
+            <input type="radio" name="theme" id="beach-btn" value="beach" />
+            <label for="beach-btn">
+      <img src="/assets/img/beach_page1.jpg" width="600" height="400" >
+            </label>
+                <div class="column">
+            <input type="radio" name="theme" id="beach-btn" value="beach" />
+            <label for="beach-btn">
+      <img src="/assets/img/rainforest_page1.jpg" width="600" height="400" >
+            </label>
+                </div>
+
+    </div> 
+    <div class="column">
+            <input type="radio" name="theme" id="beach-btn" value="beach" />
+            <label for="beach-btn">
+      <img src="/assets/img/space_page1.jpg" width="600" height="400" >
+            </label>
+                <div class="column">
+            <input type="radio" name="theme" id="beach-btn" value="beach" />
+            <label for="beach-btn">
+      <img src="/assets/img/park.jpg" width="600" height="400" >
+            </label>
+                </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+                        {{!-- <div class="container">
                             <div id="theme">
 
                                 <input type="radio" name="theme" id="rain-btn" value="rainforest" />
                                 <label for="rain-btn">
-                                    <img src="/assets/img/rainforest_page1.jpg" width="400" alt="" class="center-block">
+                                    <img src="/assets/img/rainforest_page1.jpg" width="600" height="400" alt="" class="center-block">
                                 </label>
 
                                 <input type="radio" name="theme" id="beach-btn" value="beach" />
                                 <label for="beach-btn">
-                                    <img src="/assets/img/beach_page1.jpg" width="400" alt="" class="center-block">
+                                    <img src="/assets/img/beach_page1.jpg" width="600" height="400" alt="" class="center-block">
                                 </label>
 
                                 <input type="radio" name="theme" id="space-btn" value="space" />
                                 <label for="space-btn">
-                                    <img src="/assets/img/space_page1.jpg" width="400" alt="" class="center-block">
+                                    <img src="/assets/img/space_page1.jpg" width="600" height="400" alt="" class="center-block">
                                 </label>
-                            </div>
+
+                                <input type="radio" name="theme" id="space-btn" value="park" />
+                                <label for="space-btn">
+                                    <img src="/assets/img/park.jpg" width="600"  height="400" alt="pic"  class="center-block">
+                                </label>
+
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -175,7 +219,7 @@
                             <div class="form-group col-lg-12 row">
                                 <label class="col-lg-4 col-form-label">Favorite Character</label>
                                 <div class="col-lg-8 mx-auto">
-                                    <input type="text" class="form-control" id="character" placeholder="Favorite Character">
+                                    <input type="text" class="form-control" id="character" placeholder="Favorite Character (hero, cartoon, etc.)">
                                 </div>
                             </div>
                             <br>
@@ -227,6 +271,14 @@
     </form>
 
 </body>
+
+
+
+ <img class="profile center-block" src="/assets/img/Group-Picture2.jpg" height="300" center>
+
+
+<br>
+
 
 <footer class="py-5 bg-dark">
     <div class="container">
