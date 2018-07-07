@@ -8,7 +8,7 @@ module.exports = function(app) {
     // Route to get all books on a list using books.handlebars
     app.get("/books", function(req, res) {
         db.Book.findAll({}).then(function(dbBook) {
-            res.render("books", { css: ['bootstrap.min.css', 'books.css'], bookObject: dbBook });
+            res.render("books", { css: ['bootstrap.min.css', 'books.css'], js: ['scrolling-nav.js'], bookObject: dbBook });
         });
     });
 
@@ -19,7 +19,7 @@ module.exports = function(app) {
                 id: req.params.id
             }
         }).then(function(dbBook) {
-            res.render("book", { css: ['bootstrap.min.css', 'book.css'], js: ['book.js'],bookObject: dbBook });
+            res.render("book", { css: ['bootstrap.min.css', 'book.css'], js: ['book.js', 'scrolling-nav.js'], bookObject: dbBook });
         });
     });
 };
