@@ -15,7 +15,7 @@ module.exports = function(app) {
                     name: "beach",
                     title: "myName's Day at the Beach",
                     page1: "It was a bright, sunny summer day when myName went to visit the beach with their best friend, myBff.",
-                    page2: "myName loved going to the beach and myActivity in the water and wave at the fish swimming by. Often they would name the fish after myCharacter.",
+                    page2: "myName loved going to the beach and go myActivity in the water and wave at the fish swimming by. Often they would name the fish after myCharacter.",
                     page3: "Today, myName was looking for a very special shell. This shell would allow them to hear the ocean, even when they returned back home to the big city! Can you guess what kind of shell it is?",
                     page4: "It is a special shell they were looking for. As it was big, bright, and myColor. They looked for it in the water and they looked for it in the sand.",
                     page5: "I bet if we had a myAnimal, they could help us find the shell!",
@@ -27,7 +27,7 @@ module.exports = function(app) {
                     page1: "Once upon a time, there was a little bird named myName.",
                     page2: "myName lived in a little myColor treehouse surrounded by flowers and a stream. They shared the treehouse with a myAnimal.",
                     page3: "myName's best friend was little lion cub named myBff.",
-                    page4: "During the day, the two would play in the stream, swing in the trees and play myActivity.",
+                    page4: "During the day, the two would play in the stream, swing in the trees and go myActivity.",
                     page5: "When myName and myBff got hungry, they would eat fish, slurp honey and snack on myFood.",
                     page6: "Sometimes, when they were out on an adventure, they would pretend to be myCharacter. And when their day of adventures was done, they would return to the treehouse for a nap."
                 },
@@ -49,7 +49,7 @@ module.exports = function(app) {
                     page3: "The first place we go it to the Central Park Zoo. I bet we will see all kinds of animals, maybe you will see a myAnimal.",
                     page4: "At the park, there is lots of food to buy. Our favorite food is myFood! We'll keep an eye out and get some to eat!",
                     page5: "Next, we walk, well really run to ride on the carousel. My favorite horse to ride is the myColor one. It goes up and down. myBff likes the ones that stand still.",
-                    page6: "When we aren't at the zoo, eating or carousel, we often play myActivity or just lay on the grass and staring at the clouds pretending to be myCharacter."
+                    page6: "When we aren't at the zoo, eating or carousel, we often go myActivity or just lay on the grass and staring at the clouds pretending to be myCharacter."
                 }
             ]).then(() => {
                 return db.Theme.findAll();
